@@ -13,6 +13,20 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        primary: "#0B7373",
+        secondary: "#004040",
+        gold: "#D6B66B",
+        white: "#FFFFFF",
+        black: "#000000",
+      },
+      screens: {
+        desktop: "1096px",
+      },
+      fontFamily: {
+        albertSans: ["var(--font-albert-sans)", "sans-serif"],
+        theSignature: ["TheSignature", "sans-serif"],
+      },
     },
   },
   plugins: [],
