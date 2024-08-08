@@ -18,3 +18,16 @@
 .center-container {
   @apply flex items-center justify-center;
 }
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  @apply hidden;
+}
+
+.hover-button:hover .chevron-container {
+  @apply border-gold;
+}

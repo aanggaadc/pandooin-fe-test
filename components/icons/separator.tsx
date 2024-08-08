@@ -89,8 +89,8 @@ export function SeparatorIcon({ className }: { className?: string }) {
       <path
         d="M791.51 48.38H1066.62"
         stroke="#D6B66B"
-        stroke-width="3.9"
-        stroke-miterlimit="10"
+        strokeWidth="3.9"
+        strokeMiterlimit="10"
       />
       <path
         d="M29.3828 48.38H304.491"
