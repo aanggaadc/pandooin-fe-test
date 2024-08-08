@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Providers from "@/providers";
 import Header from "@/components/header";
-import { Albert_Sans } from "next/font/google";
+import { Albert_Sans, Unbounded } from "next/font/google";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -17,13 +17,21 @@ const albertSans = Albert_Sans({
   style: ["normal", "italic"],
 });
 
+const unbounded = Unbounded({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-unbounded",
+  weight: ["400", "700"],
+  style: ["normal"],
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${albertSans.variable}`}>
+    <html lang="en" className={`${albertSans.variable} ${unbounded.variable}`}>
       <body>
         <Providers>
           <Header />

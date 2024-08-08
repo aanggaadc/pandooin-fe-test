@@ -25,6 +25,7 @@ const config: Config = {
       },
       fontFamily: {
         albertSans: ["var(--font-albert-sans)", "sans-serif"],
+        unbounded: ["var(--font-unbounded)", "sans-serif"],
         theSignature: ["TheSignature", "sans-serif"],
       },
     },

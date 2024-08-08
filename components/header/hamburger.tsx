@@ -6,7 +6,7 @@ export default function HamburgerButton({
   isOpen: boolean;
 }) {
   return (
-    <div className="flex items-center justify-center rounded-full w-[50px] h-[50px] border-[2px] border-primary md:hidden">
+    <div className="flex items-center justify-center rounded-full w-[50px] h-[50px] border-[2px] border-primary lg:hidden">
       <button
         className={`relative z-[1] scale-[0.35] ${isOpen && "mr-1.5 mb-1"}`}
         onClick={onClick}

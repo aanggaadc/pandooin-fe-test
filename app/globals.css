@@ -6,3 +6,11 @@
   font-family: "TheSignature";
   src: url("../public/fonts/the-signature.ttf");
 }
+
+.transition-all-300 {
+  @apply transition-all duration-300;
+}
+
+.container {
+  @apply max-w-screen-desktop mx-auto;
+}

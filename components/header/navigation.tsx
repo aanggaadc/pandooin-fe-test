@@ -10,10 +10,9 @@ export default function Navigation() {
   const toggleNavMobile = useCallback(() => setNavMobile((prev) => !prev), []);
 
   return (
-    <div className="flex md:gap-2">
+    <>
       <Menus isOpen={navMobile} activePath={activePath} />
-
       <HamburgerButton onClick={toggleNavMobile} isOpen={navMobile} />
-    </div>
+    </>
   );
 }
