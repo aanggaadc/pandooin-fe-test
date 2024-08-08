@@ -11,6 +11,10 @@
   @apply transition-all duration-300;
 }
 
-.container {
+.wrapper {
   @apply max-w-screen-desktop mx-auto;
+}
+
+.center-container {
+  @apply flex items-center justify-center;
 }

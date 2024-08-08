@@ -1,7 +1,7 @@
 export default function Hero() {
   return (
-    <section className="h-screen w-full bg-[url('/images/bg-hero-mobile.jpg')] bg-center bg-no-repeat bg-cover md:bg-[url('/images/bg-hero-desktop.jpg')]">
-      <div className="w-full h-full container flex items-center justify-center md:pb-[8%] md:items-end md:justify-start">
+    <section className="h-screen w-full bg-[url('/images/bg-hero-mobile.jpg')] bg-center bg-no-repeat bg-cover bg-fixed md:bg-[url('/images/bg-hero-desktop.jpg')]">
+      <div className="w-full h-full wrapper flex items-center justify-center md:pb-[8%] md:items-end md:justify-start">
         <div className="max-w-[370px] mx-auto md:max-w-[708px] md:m-0">
           <h2 className="font-theSignature text-gold text-[80px] leading-[25px] md:text-[128px] md:leading-[70px]">
             Premium Travel
