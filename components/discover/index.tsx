@@ -23,9 +23,13 @@ const Discover = () => {
               interests, ensuring a once-in-a-lifetime adventure awaits.
             </p>
 
-            <button className="w-full h-[54px] rounded-full bg-secondary center-container font-albertSans text-white font-semibold md:w-[200px] hover:bg-gold transition-all-300">
+            <a
+              href="https://pandooin.com/id/tailor-made/create"
+              target="_blank"
+              className="w-full h-[54px] rounded-full bg-secondary center-container font-albertSans text-white font-semibold md:w-[200px] hover:bg-gold transition-all-300"
+            >
               Customize Your Trip
-            </button>
+            </a>
           </div>
         </div>
       </div>

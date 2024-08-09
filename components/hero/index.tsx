@@ -1,3 +1,5 @@
+import ButtonCTA from "./cta-button";
+
 const Hero = () => {
   return (
     <section
@@ -18,9 +20,7 @@ const Hero = () => {
             selection of premium trips, ensuring comfort every step of the way
           </p>
 
-          <button className="h-[54px] w-[154px] rounded-full border-2  flex items-center justify-center font-albertSans text-white font-medium mx-auto hover:bg-gold hover:border-gold transition-all-300 md:m-0">
-            Take me there
-          </button>
+          <ButtonCTA />
         </div>
       </div>
     </section>

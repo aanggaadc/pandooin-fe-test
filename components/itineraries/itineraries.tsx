@@ -14,19 +14,23 @@ const Itineraries = () => {
 
   const itineraries = data?.data ?? [];
   return (
-    <section id="destination" className="pt-[54px] pb-6">
+    <section id="itinerary" className="pt-[54px] pb-6">
       <div className="wrapper">
         <div className="px-4 lg:px-0">
           <div className="flex flex-col gap-4 md:flex-row md:gap-6">
             <h2 className="text-[22px] font-unbounded font-bold text-secondary md:text-[36px]">
               Destinations
             </h2>
-            <button className="flex items-center gap-4 font-albertSans text-[16px] text-secondary hover-button hover:text-gold transition-all-300">
+            <a
+              href="https://www.zamrood.com/destination"
+              target="_blank"
+              className="flex items-center gap-4 font-albertSans text-[16px] text-secondary hover-button hover:text-gold transition-all-300"
+            >
               <div className="center-container w-10 h-10 rounded-full border-2 border-secondary chevron-container transition-all-300">
                 <ChevronLeftIcon />
               </div>
               EXPLORE MORE
-            </button>
+            </a>
           </div>
           <div className="py-6">
             {itineraries.map((itinerary, index) => (
@@ -46,12 +50,16 @@ const Itineraries = () => {
         </div>
 
         <div className="center-container py-[54px] md:py-[26px] md:justify-end">
-          <button className="flex items-center gap-4 font-albertSans font-semibold text-[16px] text-secondary hover-button hover:text-gold transition-all-300">
+          <a
+            href="https://www.zamrood.com/destination"
+            target="_blank"
+            className="flex items-center gap-4 font-albertSans font-semibold text-[16px] text-secondary hover-button hover:text-gold transition-all-300"
+          >
             <div className="center-container w-10 h-10 rounded-full border-2 border-secondary chevron-container transition-all-300">
               <ChevronLeftIcon />
             </div>
             EXPLORE MORE
-          </button>
+          </a>
         </div>
       </div>
     </section>

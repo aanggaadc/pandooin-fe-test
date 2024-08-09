@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { menus } from "@/fixtures";
 import { scrollToElement } from "@/lib/utils";
 
 interface MenusProps {
@@ -8,6 +7,13 @@ interface MenusProps {
   onClickMenu: (menu: string) => void;
   onClose: () => void;
 }
+
+export const menus = [
+  { name: "Homepage", slug: "home" },
+  { name: "Customize Your Trip", slug: "customize-your-trip" },
+  { name: "Destination", slug: "itinerary" },
+  { name: "Article", slug: "article" },
+];
 
 const mobileBackdrop = {
   visible: { display: "block", opacity: 0.7 },
