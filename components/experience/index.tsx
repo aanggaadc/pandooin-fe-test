@@ -31,7 +31,7 @@ const experienceData = [
 
 const Experience = () => {
   return (
-    <section className="px-4 py-8 lg:py-[80px] lg:px-0">
+    <section className="px-4 py-8 lg:py-[80px] xl:px-0">
       <div className="wrapper">
         <h2 className="font-theSignature text-primary text-center text-[54px] leading-[30px] md:text-[84px] md:leading-[45px]">
           Beyond Premium

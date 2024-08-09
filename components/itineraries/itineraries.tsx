@@ -16,7 +16,7 @@ const Itineraries = () => {
   return (
     <section id="itinerary" className="pt-[54px] pb-6">
       <div className="wrapper">
-        <div className="px-4 lg:px-0">
+        <div className="px-4 xl:px-0">
           <div className="flex flex-col gap-4 md:flex-row md:gap-6">
             <h2 className="text-[22px] font-unbounded font-bold text-secondary md:text-[36px]">
               Destinations
@@ -43,13 +43,13 @@ const Itineraries = () => {
           </div>
         </div>
 
-        <div className="hide-scrollbar py-8 px-4 flex overflow-scroll gap-4 scroll-smooth lg:px-0">
+        <div className="hide-scrollbar py-8 px-4 flex overflow-scroll gap-4 scroll-smooth xl:px-0">
           {Array.from({ length: 4 }).map((_, index) => (
             <OtherCard key={index} />
           ))}
         </div>
 
-        <div className="center-container py-[54px] md:py-[26px] md:justify-end">
+        <div className="center-container py-[54px] px-4 md:py-[26px] md:justify-end xl:px-0">
           <a
             href="https://www.zamrood.com/destination"
             target="_blank"

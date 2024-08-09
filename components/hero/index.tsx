@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="h-screen w-full bg-[url('/images/bg-hero-mobile.jpg')] bg-center bg-no-repeat bg-cover bg-fixed md:bg-[url('/images/bg-hero-desktop.jpg')]"
+      className="h-screen px-4 w-full bg-[url('/images/bg-hero-mobile.jpg')] bg-center bg-no-repeat bg-cover bg-fixed md:bg-[url('/images/bg-hero-desktop.jpg')] xl:px-0"
     >
       <div className="w-full h-full wrapper flex items-center justify-center md:pb-[8%] md:items-end md:justify-start">
         <div className="max-w-[370px] mx-auto md:max-w-[708px] md:m-0">
