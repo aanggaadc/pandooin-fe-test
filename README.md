@@ -34,7 +34,7 @@
     yarn install
     ```
 
-3. Create a `.env` file and configure the environment variables
+3. Create a `.env.local` file and configure the environment variables
    create `.env.local` file with your and put the value:
       ```bash
    NEXT_PUBLIC_API_URL=https://pandooin.com/api/zamrood/
