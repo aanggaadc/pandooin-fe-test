@@ -37,7 +37,7 @@ const Card: React.FC<CardProps> = ({ data, isOdd }) => {
         <div className="flex flex-col justify-between md:w-6/12 md:aspect-[199/128]">
           <div className="flex flex-col">
             <p className="text-xs mb-1 font-albertSans text-secondary lg:text-base lg:leading-[19.2px]">
-              {data.itinerary_day} Days
+              {data.itinerary_day} Days {data.itinerary_day - 1} Nights
             </p>
             <h3 className="text-base mb-2 font-unbounded font-semibold text-primary lg:text-4xl lg:leading-[44.64px]">
               {data.itinerary_name}
