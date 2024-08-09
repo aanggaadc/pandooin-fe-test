@@ -43,19 +43,14 @@ const Articles = () => {
 
         <div className="flex flex-col gap-6 md:flex-row">
           <div className="md:w-6/12">
-            <Card
-              className="h-full"
-              image={highlightArticle.featured_image}
-              title={highlightArticle.title}
-            />
+            <Card className="h-full" data={highlightArticle} />
           </div>
           <div className="flex flex-wrap flex-col gap-6 md:w-6/12 md:flex-row ">
             {restArticle.map((article) => (
               <Card
                 key={article.id}
                 className="md:w-[calc((100%_/_2)_-_24px_+_(24px_/_2))]"
-                image={article.featured_image}
-                title={article.title}
+                data={article}
               />
             ))}
           </div>
