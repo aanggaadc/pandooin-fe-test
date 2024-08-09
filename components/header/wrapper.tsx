@@ -25,7 +25,7 @@ const HeaderWrapper: React.FC<HeaderWrapperProps> = ({ children }) => {
       className={cn(
         "p-4 bg-white lg:py-7 lg:px-0 transition-all-300",
         isScrolled
-          ? "lg:bg-[rgba(0,0,0,0.6)] lg:backdrop-blur-sm"
+          ? "lg:bg-[rgba(0,0,0,0.6)] lg:backdrop-blur-sm lg:py-4"
           : "lg:bg-transparent"
       )}
     >
