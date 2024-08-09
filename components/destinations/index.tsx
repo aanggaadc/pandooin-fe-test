@@ -4,7 +4,7 @@ import { ChevronLeftIcon } from "../icons";
 
 const Destinations = () => {
   return (
-    <section className="pt-[54px] pb-6">
+    <section id="destination" className="pt-[54px] pb-6">
       <div className="wrapper">
         <div className="px-4 lg:px-0">
           <div className="flex flex-col gap-4 md:flex-row md:gap-6">

@@ -6,12 +6,21 @@ import HamburgerButton from "./hamburger";
 
 export default function Navigation() {
   const [navMobile, setNavMobile] = useState(false);
-  const [activePath, setActivePath] = useState("homepage");
+  const [activePath, setActivePath] = useState("home");
   const toggleNavMobile = useCallback(() => setNavMobile((prev) => !prev), []);
+
+  const onClickMenu = (menu: string) => {
+    setActivePath(menu);
+    setNavMobile(false);
+  };
 
   return (
     <>
-      <Menus isOpen={navMobile} activePath={activePath} />
+      <Menus
+        isOpen={navMobile}
+        activePath={activePath}
+        onClickMenu={onClickMenu}
+      />
       <HamburgerButton onClick={toggleNavMobile} isOpen={navMobile} />
     </>
   );

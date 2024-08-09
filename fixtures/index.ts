@@ -1,7 +1,6 @@
 export const menus = [
-  { name: "Homepage", href: "/" },
-  { name: "Customize Your Trip", href: "/" },
-  { name: "Destination", href: "/tentang" },
-  { name: "Article", href: "/layanan" },
-  { name: "Need Assistance?", href: "/produk", isButton: true },
+  { name: "Homepage", slug: "home" },
+  { name: "Customize Your Trip", slug: "customize-your-trip" },
+  { name: "Destination", slug: "destination" },
+  { name: "Article", slug: "article" },
 ];

@@ -3,7 +3,7 @@ import { SeparatorIcon } from "../icons";
 
 const Discover = () => {
   return (
-    <section className="p-4 md:px-0 md:py-[72px]">
+    <section id="customize-your-trip" className="p-4 md:px-0 md:py-[72px]">
       <div className="wrapper mb-[80px]">
         <div className="flex flex-col gap-4 md:flex-row md:items-center">
           <Image

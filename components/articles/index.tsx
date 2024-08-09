@@ -3,7 +3,7 @@ import Card from "./card";
 
 const Articles = () => {
   return (
-    <section className="py-6 px-4 lg:px-0 lg:py-[54px]">
+    <section id="article" className="py-6 px-4 lg:px-0 lg:py-[54px]">
       <div className="wrapper">
         <Image
           className="w-full md:hidden mb-[54px]"

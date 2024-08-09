@@ -28,6 +28,7 @@ const experienceData = [
     icon: <BestFacilitiesIcon />,
   },
 ];
+
 const Experience = () => {
   return (
     <section className="px-4 py-8 lg:py-[80px] lg:px-0">
