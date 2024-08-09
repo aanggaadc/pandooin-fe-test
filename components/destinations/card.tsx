@@ -1,12 +1,8 @@
 "use client";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, EffectFade } from "swiper/modules";
+import { Carousel } from "../shared";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import "swiper/css";
-import "swiper/css/autoplay";
-import "swiper/css/effect-fade";
 
 interface CardProps {
   title: string;
@@ -36,16 +32,9 @@ const Card: React.FC<CardProps> = ({
             isOdd && "md:order-2"
           )}
         >
-          <Swiper
-            modules={[Autoplay, EffectFade]}
-            spaceBetween={0}
-            slidesPerView={1}
-            autoplay
-            effect="fade"
-            loop
-          >
+          <Carousel autoPlay effect="fade" loop>
             {images?.map((image, index) => (
-              <SwiperSlide key={index}>
+              <Carousel.Item key={index}>
                 <Image
                   className="w-full h-full object-cover object-center"
                   src={image}
@@ -53,9 +42,9 @@ const Card: React.FC<CardProps> = ({
                   width={320}
                   height={180}
                 />
-              </SwiperSlide>
+              </Carousel.Item>
             ))}
-          </Swiper>
+          </Carousel>
         </div>
 
         <div className="flex flex-col justify-between md:w-6/12 md:aspect-[199/128]">
