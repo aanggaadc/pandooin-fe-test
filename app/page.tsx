@@ -3,6 +3,7 @@ import Experience from "@/components/experience";
 import Discover from "@/components/discover";
 import Destinations from "@/components/destinations";
 import Footages from "@/components/footages";
+import Articles from "@/components/articles";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Discover />
       <Destinations />
       <Footages />
+      <Articles />
     </main>
   );
 }
