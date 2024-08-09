@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { scrollToElement } from "@/lib/utils";
+import { CloseIcon } from "../icons";
 
 interface MenusProps {
   isOpen: boolean;
@@ -51,29 +52,35 @@ const Menus: React.FC<MenusProps> = ({
         className={`fixed flex items-center justify-end z-20 w-[70%] text-right font-albertSans text-primary h-full top-0 right-0 transform transition-transform duration-300 ease-in-out bg-white overflow-auto p-4 lg:p-0 lg:text-white lg:text-left lg:static lg:block lg:transform-none lg:transition-none lg:w-auto lg:h-auto lg:bg-transparent 
         ${isOpen ? "translate-x-0" : "translate-x-full"}`}
       >
-        <ul className="flex flex-col font-semibold lg:flex-row lg:items-center lg:gap-6">
-          {menus.map((menu) => (
-            <li
-              onClick={() => handleClick(menu.slug)}
-              className={`cursor-pointer p-5 md:px-[15px] md:py-[18px] ${isActive(
-                activePath,
-                menu.slug
-              )}`}
-              key={menu.name}
-            >
-              {menu.name}
-            </li>
-          ))}
+        <div className="relative h-fit">
+          <button className="absolute -top-20 right-0" onClick={onClose}>
+            <CloseIcon />
+          </button>
 
-          <li className="cursor-pointer px-6 py-2.5 md:px-[15px] md:py-[18px] border-2 border-secondary rounded-full hover:lg:border-gold hover:lg:bg-gold lg:border-white transition-all-300">
-            <a
-              href="https://api.whatsapp.com/send/?phone=6283831556160&text=Hi%2C+I+wanna+ask+question+about+Zamrood&type=phone_number&app_absent=0"
-              target="_blank"
-            >
-              Need Assistance?
-            </a>
-          </li>
-        </ul>
+          <ul className="flex flex-col font-semibold lg:flex-row lg:items-center lg:gap-6">
+            {menus.map((menu) => (
+              <li
+                onClick={() => handleClick(menu.slug)}
+                className={`cursor-pointer p-5 md:px-[15px] md:py-[18px] ${isActive(
+                  activePath,
+                  menu.slug
+                )}`}
+                key={menu.name}
+              >
+                {menu.name}
+              </li>
+            ))}
+
+            <li className="cursor-pointer px-6 py-2.5 md:px-[15px] md:py-[18px] border-2 border-secondary rounded-full hover:lg:border-gold hover:lg:bg-gold lg:border-white transition-all-300">
+              <a
+                href="https://api.whatsapp.com/send/?phone=6283831556160&text=Hi%2C+I+wanna+ask+question+about+Zamrood&type=phone_number&app_absent=0"
+                target="_blank"
+              >
+                Need Assistance?
+              </a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </>
   );

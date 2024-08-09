@@ -6,3 +6,5 @@ export * from "./chevron-left";
 export * from "./facebook";
 export * from "./instagram";
 export * from "./mail";
+export * from "./hamburger";
+export * from "./close";

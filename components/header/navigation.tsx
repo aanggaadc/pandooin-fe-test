@@ -2,7 +2,7 @@
 
 import { useState, useCallback } from "react";
 import Menus from "./menus";
-import HamburgerButton from "./hamburger";
+import { HamburgerIcon } from "../icons";
 
 export default function Navigation() {
   const [navMobile, setNavMobile] = useState(false);
@@ -34,7 +34,10 @@ export default function Navigation() {
         activePath={activePath}
         onClickMenu={onClickMenu}
       />
-      <HamburgerButton onClick={toggleNavMobile} isOpen={navMobile} />
+
+      <button className="lg:hidden" onClick={toggleNavMobile}>
+        <HamburgerIcon />
+      </button>
     </>
   );
 }
