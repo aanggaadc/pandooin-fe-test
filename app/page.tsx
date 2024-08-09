@@ -4,6 +4,7 @@ import Discover from "@/components/discover";
 import Destinations from "@/components/destinations";
 import Footages from "@/components/footages";
 import Articles from "@/components/articles";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Destinations />
       <Footages />
       <Articles />
+      <Footer />
     </main>
   );
 }
