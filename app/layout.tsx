@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Providers from "@/providers";
 import Header from "@/components/header";
+import Footer from "@/components/footer";
 import { Albert_Sans, Unbounded } from "next/font/google";
 import "./globals.css";
 import "swiper/css";
@@ -39,6 +40,7 @@ export default function RootLayout({
         <Providers>
           <Header />
           {children}
+          <Footer />
         </Providers>
       </body>
     </html>
