@@ -5,5 +5,5 @@ export const getItinerary = async () => {
 };
 
 export const getArticles = async () => {
-  return fetcher<IResponse<IArticle[]>>("/article", { highlight: true });
+  return fetcher<IResponse<IArticle[]>>("article", { highlight: true });
 };
