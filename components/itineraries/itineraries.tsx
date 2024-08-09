@@ -1,8 +1,18 @@
+"use client";
+
+import { useQuery } from "@tanstack/react-query";
+import { getItinerary } from "@/api";
 import Card from "./card";
 import OtherCard from "./other-card";
 import { ChevronLeftIcon } from "../icons";
 
-const Destinations = () => {
+const Itineraries = () => {
+  const { data } = useQuery({
+    queryKey: ["itinerary"],
+    queryFn: () => getItinerary(),
+  });
+
+  const itineraries = data?.data ?? [];
   return (
     <section id="destination" className="pt-[54px] pb-6">
       <div className="wrapper">
@@ -19,22 +29,10 @@ const Destinations = () => {
             </button>
           </div>
           <div className="py-6">
-            {Array.from({ length: 4 }).map((_, index) => (
+            {itineraries.map((itinerary, index) => (
               <Card
-                key={index}
-                title=" Paradise Gateway: Labuan Bajo"
-                subTitle="7 DAYS 6 NIGHT"
-                description="Labuan Bajo is a tropical paradise nestled in the westernmost part
-              of Flores Island, Indonesia. With its stunning landscapes,
-              crystal-clear waters, and vibrant marine life, it's a gateway to
-              explore the mesmerizing Komodo National Park."
-                discount="IDR 9,999,999"
-                price="IDR 5,200,000"
-                images={[
-                  "/images/dummy.jpg",
-                  "/images/dummy-3.jpg",
-                  "/images/dummy-2.jpg",
-                ]}
+                key={itinerary.itinerary_id}
+                data={itinerary}
                 isOdd={index % 2 !== 0}
               />
             ))}
@@ -60,4 +58,4 @@ const Destinations = () => {
   );
 };
 
-export default Destinations;
+export default Itineraries;

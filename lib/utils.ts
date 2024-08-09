@@ -12,3 +12,7 @@ export function scrollToElement(elementId: string) {
     element.scrollIntoView({ behavior: "smooth" });
   }
 }
+
+export function formatPrice(price: string) {
+  return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}

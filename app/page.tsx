@@ -1,7 +1,7 @@
 import Hero from "@/components/hero";
 import Experience from "@/components/experience";
 import Discover from "@/components/discover";
-import Destinations from "@/components/destinations";
+import Itineraries from "@/components/itineraries/itineraries";
 import Footages from "@/components/footages";
 import Articles from "@/components/articles";
 
@@ -11,7 +11,7 @@ export default function Home() {
       <Hero />
       <Experience />
       <Discover />
-      <Destinations />
+      <Itineraries />
       <Footages />
       <Articles />
     </main>
