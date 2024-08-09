@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { menus } from "@/fixtures";
 import { scrollToElement } from "@/lib/utils";
 
@@ -7,6 +8,11 @@ interface MenusProps {
   onClickMenu: (menu: string) => void;
   onClose: () => void;
 }
+
+const mobileBackdrop = {
+  visible: { display: "block", opacity: 0.7 },
+  hidden: { display: "none", opacity: 0 },
+};
 
 const isActive = (activePath: string, name: string) => {
   return (
@@ -26,12 +32,14 @@ const Menus: React.FC<MenusProps> = ({
   };
   return (
     <>
-      {isOpen && (
-        <div
-          className="fixed inset-0 z-10 bg-[rgba(0,0,0,0.7)] animate-fade-in"
-          onClick={onClose}
-        />
-      )}
+      <motion.div
+        initial="hidden"
+        animate={isOpen ? "visible" : "hidden"}
+        transition={{ duration: 0.3 }}
+        variants={mobileBackdrop}
+        className="fixed inset-0 z-10 bg-black lg:!hidden"
+        onClick={onClose}
+      />
 
       <nav
         className={`fixed flex items-center justify-end z-20 w-[70%] text-right font-albertSans text-primary h-full top-0 right-0 transform transition-transform duration-300 ease-in-out bg-white overflow-auto p-4 lg:p-0 lg:text-white lg:text-left lg:static lg:block lg:transform-none lg:transition-none lg:w-auto lg:h-auto lg:bg-transparent 
