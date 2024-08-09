@@ -18,6 +18,7 @@ export default function Navigation() {
     <>
       <Menus
         isOpen={navMobile}
+        onClose={() => setNavMobile(false)}
         activePath={activePath}
         onClickMenu={onClickMenu}
       />

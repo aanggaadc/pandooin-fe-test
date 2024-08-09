@@ -28,6 +28,20 @@ const config: Config = {
         unbounded: ["var(--font-unbounded)", "sans-serif"],
         theSignature: ["TheSignature", "sans-serif"],
       },
+      animation: {
+        "fade-in": "fadeIn 0.3s ease-in-out",
+        "fade-out": "fadeOut 0.3s ease-in-out",
+      },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        fadeOut: {
+          "0%": { opacity: "1" },
+          "100%": { opacity: "0" },
+        },
+      },
     },
   },
   plugins: [],
