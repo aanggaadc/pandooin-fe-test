@@ -7,18 +7,30 @@ import HamburgerButton from "./hamburger";
 export default function Navigation() {
   const [navMobile, setNavMobile] = useState(false);
   const [activePath, setActivePath] = useState("home");
-  const toggleNavMobile = useCallback(() => setNavMobile((prev) => !prev), []);
+  const toggleNavMobile = useCallback(() => {
+    setNavMobile((prev) => !prev);
+    if (navMobile) {
+      document.body.removeAttribute("style");
+    } else {
+      document.body.style.overflow = "hidden";
+    }
+  }, [navMobile]);
+
+  const onClose = () => {
+    setNavMobile(false);
+    document.body.removeAttribute("style");
+  };
 
   const onClickMenu = (menu: string) => {
     setActivePath(menu);
-    setNavMobile(false);
+    onClose();
   };
 
   return (
     <>
       <Menus
         isOpen={navMobile}
-        onClose={() => setNavMobile(false)}
+        onClose={onClose}
         activePath={activePath}
         onClickMenu={onClickMenu}
       />

@@ -20,7 +20,7 @@ const socialMedia = [
 
 const Footer = () => {
   return (
-    <footer className="px-4 py-6 bg-secondary lg:px-0">
+    <footer className="px-4 py-6 bg-primary lg:px-0">
       <div className="wrapper">
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <p className="font-albertSans leading-[19.2px] text-center text-white">
