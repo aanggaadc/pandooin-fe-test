@@ -3,6 +3,9 @@ import Providers from "@/providers";
 import Header from "@/components/header";
 import { Albert_Sans, Unbounded } from "next/font/google";
 import "./globals.css";
+import "swiper/css";
+import "swiper/css/autoplay";
+import "swiper/css/effect-fade";
 
 export const metadata: Metadata = {
   title: "Pandooin Technical Test",
