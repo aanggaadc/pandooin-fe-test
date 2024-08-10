@@ -26,7 +26,7 @@ export function HamburgerIcon({
       <path
         d="M15.9639 27.9623H39.9639"
         stroke={color ?? "#337172"}
-        stroke-width="3"
+        strokeWidth="3"
         strokeLinecap="round"
         strokeLinejoin="round"
       ></path>

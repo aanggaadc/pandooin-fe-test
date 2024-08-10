@@ -8,3 +8,4 @@ export * from "./instagram";
 export * from "./mail";
 export * from "./hamburger";
 export * from "./close";
+export * from "./arrow-tr";
