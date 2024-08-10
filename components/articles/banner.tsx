@@ -7,8 +7,8 @@ const Banner = () => {
         className="w-[145px]"
         src="/logo-white.png"
         alt="logo"
-        width={135}
-        height={50}
+        width={155}
+        height={70}
       />
 
       <div>
