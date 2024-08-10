@@ -2,6 +2,7 @@
 
 import { useQuery } from "@tanstack/react-query";
 import Image from "next/image";
+import Banner from "./banner";
 import { getArticles } from "@/api";
 import Card from "./card";
 
@@ -18,21 +19,7 @@ const Articles = () => {
   return (
     <section id="article" className="py-6 px-4 xl:px-0 lg:py-[54px]">
       <div className="wrapper">
-        <Image
-          className="w-full md:hidden mb-[54px]"
-          src="/images/banner-mobile.jpg"
-          alt="banner"
-          width={398}
-          height={168}
-        />
-
-        <Image
-          className="w-full hidden md:block mb-[72px]"
-          src="/images/banner-desktop.jpg"
-          alt="banner"
-          width={1096}
-          height={102}
-        />
+        <Banner />
 
         <h2 className="text-[22px] text-secondary font-bold leading-[27.28px] font-unbounded mb-2 md:text-4xl md:leading-[44.64px]">
           Articles
