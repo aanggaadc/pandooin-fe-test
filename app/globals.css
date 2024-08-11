@@ -31,3 +31,7 @@
 .hover-button:hover .chevron-container {
   @apply border-gold;
 }
+
+.swiper {
+  height: 100%;
+}

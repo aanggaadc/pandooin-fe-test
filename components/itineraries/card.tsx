@@ -19,7 +19,7 @@ const Card: React.FC<CardProps> = ({ data, isOdd }) => {
             isOdd && "md:order-2"
           )}
         >
-          <Carousel autoPlay effect="fade" loop>
+          <Carousel autoPlay effect="fade">
             {data.related_galleries?.map((gallery, index) => (
               <Carousel.Item key={index}>
                 <Image
