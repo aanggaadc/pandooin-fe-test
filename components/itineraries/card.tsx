@@ -26,8 +26,8 @@ const Card: React.FC<CardProps> = ({ data, isOdd }) => {
                   className="w-full h-full object-cover object-center"
                   src={gallery.src}
                   alt="destination"
-                  width={320}
-                  height={180}
+                  width={540}
+                  height={347}
                 />
               </Carousel.Item>
             ))}
