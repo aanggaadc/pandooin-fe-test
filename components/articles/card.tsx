@@ -1,19 +1,18 @@
-import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 interface CardProps {
   data: IArticle;
-  className?: string;
 }
 
-const Card: React.FC<CardProps> = ({ className, data }) => {
+const Card: React.FC<CardProps> = ({ data }) => {
   return (
-    <article className={cn("w-full flex flex-col relative", className)}>
+    <article className="w-full h-full flex flex-col relative">
       <a
+        className="h-full"
         href={`https://pandooin.com/blog/article/${data.slug}`}
         target="_blank"
       >
-        <div className="w-full flex-grow aspect-[199/171] overflow-hidden transition-all-300 grayscale hover:grayscale-0 md:aspect-[256/347]">
+        <div className="w-full h-full flex-grow aspect-[199/171] overflow-hidden transition-all-300 grayscale hover:grayscale-0 md:aspect-[256/347]">
           <Image
             className="w-full h-full object-cover object-center"
             src={data.featured_image}

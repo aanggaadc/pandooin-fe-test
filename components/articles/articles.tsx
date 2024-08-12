@@ -1,7 +1,6 @@
 "use client";
 
 import { useQuery } from "@tanstack/react-query";
-import Image from "next/image";
 import Banner from "./banner";
 import { getArticles } from "@/api";
 import Card from "./card";
@@ -13,8 +12,6 @@ const Articles = () => {
   });
 
   const articles = data?.data ?? [];
-  const highlightArticle = articles[0];
-  const restArticle = articles.slice(1);
 
   return (
     <section id="article" className="py-6 px-4 xl:px-0 lg:py-[54px]">
@@ -28,19 +25,15 @@ const Articles = () => {
           Our curated writings, offering something for every reader.
         </p>
 
-        <div className="flex flex-col gap-6 md:flex-row">
-          <div className="md:w-6/12">
-            <Card className="h-full" data={highlightArticle} />
-          </div>
-          <div className="flex flex-wrap flex-col gap-6 md:w-6/12 md:flex-row ">
-            {restArticle.map((article) => (
-              <Card
-                key={article.id}
-                className="md:w-[calc((100%_/_2)_-_24px_+_(24px_/_2))]"
-                data={article}
-              />
-            ))}
-          </div>
+        <div className="grid md:grid-cols-4 gap-6 items-stretch">
+          {articles.map((article, index) => (
+            <div
+              key={index}
+              className={`${index === 0 && "md:col-span-2 md:row-span-2"}`}
+            >
+              <Card key={article.id} data={article} />
+            </div>
+          ))}
         </div>
       </div>
     </section>
