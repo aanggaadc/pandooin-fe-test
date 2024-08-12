@@ -1,15 +1,13 @@
-import Image from "next/image";
+import { Image } from "../shared";
 import { ArrowTRIcon } from "../icons";
 
 const Banner = () => {
   return (
     <div className="w-full flex flex-col gap-2 items-center justify-center mb-[54px] aspect-[199/84] bg-[linear-gradient(0deg,rgba(0,0,0,0.36)_0%,rgba(0,0,0,0.36)_100%),url('/images/banner.webp')] bg-center bg-no-repeat bg-cover bg-\[lightgray\] md:mb-[72px] md:aspect-[548/51] md:p-6 md:flex-row md:justify-between">
       <Image
-        className="w-[145px]"
+        wrapper={{ className: "w-[145px] h-auto aspect-[134/49]" }}
         src="/logo-white.png"
         alt="logo"
-        width={155}
-        height={70}
       />
 
       <div>

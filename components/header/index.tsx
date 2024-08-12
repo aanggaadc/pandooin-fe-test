@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Image } from "../shared";
 import HeaderWrapper from "./wrapper";
 import Navigation from "./navigation";
 
@@ -12,19 +12,15 @@ export default async function Header() {
 
         <div className="flex items-center justify-between max-w-screen-desktop mx-auto">
           <Image
-            className="w-[134px] lg:hidden"
+            wrapper={{ className: "w-[134px] lg:hidden aspect-[134/49]" }}
             src="/logo-color.png"
             alt="logo"
-            width={135}
-            height={50}
           />
 
           <Image
-            className="w-[134px] hidden lg:block"
+            wrapper={{ className: "w-[134px] hidden lg:block aspect-[134/49]" }}
             src="/logo-white.png"
             alt="logo"
-            width={135}
-            height={50}
           />
 
           <Navigation />

@@ -1,7 +1,6 @@
 "use client";
 
-import Image from "next/image";
-import { Carousel } from "../shared";
+import { Carousel, Image } from "../shared";
 import { cn, formatPrice } from "@/lib/utils";
 
 interface CardProps {
@@ -22,13 +21,7 @@ const Card: React.FC<CardProps> = ({ data, isOdd }) => {
           <Carousel autoPlay effect="fade">
             {data.related_galleries?.map((gallery, index) => (
               <Carousel.Item key={index}>
-                <Image
-                  className="w-full h-full object-cover object-center"
-                  src={gallery.src}
-                  alt="destination"
-                  width={540}
-                  height={347}
-                />
+                <Image src={gallery.src} alt="destination" />
               </Carousel.Item>
             ))}
           </Carousel>
