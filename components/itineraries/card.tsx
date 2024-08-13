@@ -35,7 +35,7 @@ const Card: React.FC<CardProps> = ({ data, isOdd }) => {
             <h3 className="text-base mb-2 font-unbounded font-semibold text-primary lg:text-4xl lg:leading-[44.64px]">
               {data.itinerary_name}
             </h3>
-            <p className="leading-tight font-albertSans text-xs text-secondary mb-2 lg:text-base lg:leading-[19.2px] md:order-4">
+            <p className="leading-tight font-albertSans text-xs text-secondary line-clamp-4 mb-2 lg:text-base lg:leading-[19.2px] md:order-4 ">
               {data.itinerary_short_description}
             </p>
             <p className="text-xs font-bold font-albertSans text-secondary lg:text-base lg:leading-[19.2px] ">
