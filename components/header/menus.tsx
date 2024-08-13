@@ -22,9 +22,7 @@ const mobileBackdrop = {
 };
 
 const isActive = (activePath: string, name: string) => {
-  return (
-    activePath === name.toLocaleLowerCase() && "lg:border-b-2 lg:border-white"
-  );
+  return activePath === name.toLocaleLowerCase();
 };
 
 const Menus: React.FC<MenusProps> = ({
@@ -60,13 +58,17 @@ const Menus: React.FC<MenusProps> = ({
           <ul className="flex flex-col font-semibold lg:flex-row lg:items-center lg:gap-6">
             {menus.map((menu) => (
               <li
-                onClick={() => handleClick(menu.slug)}
-                className={`cursor-pointer p-5 md:px-[15px] md:py-[18px] ${isActive(
-                  activePath,
-                  menu.slug
-                )}`}
                 key={menu.name}
+                onClick={() => handleClick(menu.slug)}
+                className="relative cursor-pointer p-5 md:px-[15px] md:py-[18px]"
               >
+                {isActive(activePath, menu.slug) && (
+                  <motion.span
+                    layoutId="nav-link-active"
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-white origin-[50%_50%_0px]"
+                  />
+                )}
+
                 {menu.name}
               </li>
             ))}

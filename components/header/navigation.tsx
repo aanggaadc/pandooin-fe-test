@@ -1,10 +1,14 @@
 "use client";
 
 import { useState, useCallback } from "react";
+import { useParams } from "next/navigation";
+import { useIsomorphicLayoutEffect } from "framer-motion";
 import Menus from "./menus";
 import { HamburgerIcon } from "../icons";
 
 export default function Navigation() {
+  const params = useParams();
+
   const [navMobile, setNavMobile] = useState(false);
   const [activePath, setActivePath] = useState("home");
   const toggleNavMobile = useCallback(() => {
@@ -25,6 +29,11 @@ export default function Navigation() {
     setActivePath(menu);
     onClose();
   };
+
+  useIsomorphicLayoutEffect(() => {
+    const path = window.location.hash.replace("#", "");
+    setActivePath(path || "home");
+  }, [params]);
 
   return (
     <>

@@ -7,6 +7,7 @@ import "./globals.css";
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/effect-fade";
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
 export const metadata: Metadata = {
   title: "Pandooin Technical Test",

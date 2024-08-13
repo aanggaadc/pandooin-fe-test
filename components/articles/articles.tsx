@@ -4,6 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import Banner from "./banner";
 import { getArticles } from "@/api";
 import Card from "./card";
+import { SectionObserver } from "../shared";
 
 const Articles = () => {
   const { data } = useQuery({
@@ -15,6 +16,7 @@ const Articles = () => {
 
   return (
     <section id="article" className="py-6 px-4 xl:px-0 lg:py-[54px]">
+      <SectionObserver hash="#article" />
       <div className="wrapper">
         <Banner />
 

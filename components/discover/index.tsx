@@ -1,9 +1,11 @@
 import Image from "next/image";
+import { SectionObserver } from "../shared";
 import { SeparatorIcon } from "../icons";
 
 const Discover = () => {
   return (
     <section id="customize-your-trip" className="p-4 md:px-0 md:py-[72px]">
+      <SectionObserver hash="#customize-your-trip" />
       <div className="wrapper mb-[80px]">
         <div className="flex flex-col gap-4 md:flex-row md:items-center">
           <Image

@@ -4,6 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import { getItinerary } from "@/api";
 import Card from "./card";
 import OtherCard from "./other-card";
+import { SectionObserver } from "../shared";
 import { ChevronLeftIcon } from "../icons";
 
 const Itineraries = () => {
@@ -15,6 +16,7 @@ const Itineraries = () => {
   const itineraries = data?.data ?? [];
   return (
     <section id="itinerary" className="pt-[54px] pb-6">
+      <SectionObserver hash="#itinerary" />
       <div className="wrapper">
         <div className="px-4 xl:px-0">
           <div className="flex flex-col gap-4 md:flex-row md:gap-6">
