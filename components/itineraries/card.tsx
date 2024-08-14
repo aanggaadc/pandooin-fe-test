@@ -32,7 +32,7 @@ const Card: React.FC<CardProps> = ({ data, isOdd }) => {
             <p className="text-xs mb-1 font-albertSans text-secondary lg:text-base lg:leading-[19.2px]">
               {data.itinerary_day} Days {data.itinerary_day - 1} Nights
             </p>
-            <h3 className="text-base mb-2 font-unbounded font-semibold text-primary lg:text-4xl lg:leading-[44.64px]">
+            <h3 className="text-base mb-2 font-unbounded font-semibold text-primary lg:text-4xl lg:leading-[44.64px] line-clamp-2">
               {data.itinerary_name}
             </h3>
             <p className="leading-tight font-albertSans text-xs text-secondary line-clamp-4 mb-2 lg:text-base lg:leading-[19.2px] md:order-4">
