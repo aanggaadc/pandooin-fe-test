@@ -35,12 +35,8 @@ const Itineraries = () => {
             </a>
           </div>
           <div className="py-6">
-            {itineraries.map((itinerary, index) => (
-              <Card
-                key={itinerary.itinerary_id}
-                data={itinerary}
-                isOdd={index % 2 !== 0}
-              />
+            {itineraries.map((itinerary) => (
+              <Card key={itinerary.itinerary_id} data={itinerary} />
             ))}
           </div>
         </div>
